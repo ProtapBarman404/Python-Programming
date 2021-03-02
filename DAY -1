@@ -149,3 +149,68 @@ backwards = letters[::-1]
 print(backwards)                                #zyxuvutsrqponmlkjihgfedcba
 print(letters[-4:])                             #wxyz
 print(letters[-1:])                             #z
+
+#String Operators
+string1 = "he's "
+string2 = "probably "
+string3 = "pinning "
+string4 = "for the "
+string5 = "fjords"
+print(string1 + string2 + string3 + string4 + string5)             #he's probably pinning for the fjords
+print("Hello " * 5)                                                #Hello Hello Hello Hello Hello 
+print("Hello " * (5 + 4))                                          #Hello Hello Hello Hello Hello Hello Hello Hello Hello
+print("Hello " * 5 + "4")                                          #Hello Hello Hello Hello Hello 4
+
+
+
+#String Replacement Fields
+age = 21
+print ("My age is " + str(age) + " years.")                                                       #My age is 21 years.
+#or
+print("My age is {0} years".format(age))                                                          #My age is 21 years.
+
+print("There are {0} days in {1}.{2},{3},{4},{5},{6} and {7}"
+      .format(31,"Jan", "Mar", "May","Jul", "Aug", "Oct", "Dec"))                                 #There are 31 days in Jan.Mar,May,Jul,Aug,Oct and Dec                      #Multiple replacement fields
+
+print("Jan:{2}, Feb:{0}, Mar:{2}, Apr:{1}, May:{2}, Jun:{1}, Jul:{2}, Aug:{2}, Sep:{1}, Oct:{2}, Nov:{1}, Dec:{2}"
+      .format(28,30,31))                                                                          #Jan:31, Feb:28, Mar:31, Apr:30, May:31, Jun:30, Jul:31, Aug:31, Sep:30, Oct:31, Nov:30, Dec:31
+
+
+print("""Jan:{2}
+Feb:{0} 
+Mar:{2}
+Apr:{1}
+May:{2}
+Jun:{1}
+Jul:{2}
+Aug:{2}
+Sep:{1}
+Oct:{2}
+Nov:{1}
+Dec:{2}""".format(28,30,31))
+
+
+#String Formatting
+for i in range(1,13):
+    print("No. {0} squared is {1} and cubed is {2}".format(i, i**2, i**3))
+for i in range(1,13):
+    print("No. {0:4} squared is {1:4} and cubed is {2:4}".format(i, i**2, i**3))                             #giving width to the values
+for i in range(1,13):
+    print("No. {0:<2} squared is {1:<3} and cubed is {2:<4}".format(i, i**2, i**3))                          #left lined format.
+for i in range(1,13):
+    print("No. {0:>2} squared is {1:>3} and cubed is {2:>4}".format(i, i**2, i**3))                          #right lined format.
+for i in range(1,13):
+    print("No. {0:^2} squared is {1:^3} and cubed is {2:^4}".format(i, i**2, i**3))                          #centre lined format
+ 
+print("Pi is approximately {0:12}".format(22/7))
+print("Pi is approximately {0:12f}".format(22/7))                 #12f means total 12 width of 22/7 in decomal, so 6 before and 6 afrer decimal
+print("Pi is approximately {0:52.50f}".format(22/7))              #sometime Python skips width before decimal
+print("Pi is approximately {0:72.52f}".format(22/7))              #.52f means 52 values after decimal
+print("Pi is approximately {0:<72.52f}".format(22/7))             #left aligned
+
+
+#f-string: string formatting without using .format()
+age = 21
+name = "Protap"
+print(name + f"is {age} years old")                                #Protap is 21 years old
+
