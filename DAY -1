@@ -1,1 +1,125 @@
+#First code.
+print("hello world")                                #hello world                                         #print is a inbuilt function of python, which returns the value inputed in ().
+
+
+
+
+#Strings
+print("today is a good day to learn Python")        #today is a good day to learn Python                 #In this example - "today is a good day to learn python" - ia a string.
+print("Python is fun" )                             #Python is fun
+print("Python's strings are easy to use")           #Python's strings are easy to use
+print("we can even include 'quotes' in strings")
+print("hello" + " world")                           #hello world                                          #we can add strings
+print("hello" + "world" + 2)                        #TypeError                                            #We can't add different data types, "hello" is a string and 2 is numeric.
+
+
+
+
+#Split Strings
+splitstring = "This string has been\nsplit over\nseveral\nlines"                                       
+print(splitstring)                                                                                     #Output will be splited in different line where \n is inputed.
+#or
+splitString = """This string has been
+split
+over
+several
+lines"""
+print(splitString)                                                                                     #Triple cotation is an escape function, so output will be the raw string.
+
+#remove lines from a string
+splitStringReverse = """This string has been \
+split \
+over \
+several \
+lines"""
+print(splitStringReverse)                         #This string has been split over several ines                      # \ escaped lines and outputed the value to a single line..
+print("""The pet shop owner said "No, no, \
+'e's uh,...he's resting".""")                     #The pet shop owner said "No, no, 'e's uh ,...he's resting"        # \ escaped line in this exaple.
+
+#add tabs to a string
+tabbedString = "1\t2\t3\t4\t5"
+print(tabbedString)                               #1    2    3    4                                                  #\t adds tab, in console it add 8 characters(space), in other ides it's 4 characters.
+
+#escape cotation on a string
+print("The pet shop owner said \"No, no, 'e's uh,...he's resting\".")           #The pet shop owner said "No, no, 'e's uh,...he's resting".       #In this example \" skips the " after \.
+#or
+print("""The pet shop owner said "No, no, 'e's uh,...he's resting".""")         #The pet shop owner said "No, no, 'e's uh,...he's resting".       #Other way to skip "" without using \
+
+print("C:\\users\\protap\\notes.txt")                                           #C:\users\protap\notes.tx                                         #\ is an escape function so \ skips the 2nd \ on \\ in this string.
+#or
+print(r"C:\users\protap\notes.txt")                                             #C:\users\protap\notes.tx                                         #'r' creates a raw string, so output will be the whole string, escape funtion will not work.
+print(r"C:\\users\\protap\\notes.txt")                                          #C:\\users\\protap\\notes.tx\
+
+
+
+
+#Variables: Variable is way to give a name to a area of memory where we can place certain data or value.
+#variable names must be started with letter or underscore but can't begin with numbers. Example,a = 2 and _a = 2 is correct but 2a = 4 isn't correct.
+#varibales are case sensitive, so upper case and lower case would refer different variables Example, A = 2 and a = 2 is different.
+
+age = 24                                                                                                  #In this example I assigned the value 24 to the variable age.   
+print(age)                #24
+
+#data type recognition
+print(type('protap'))     #<class 'str'>                                                                  #type function outputs data type.
+print(type(24))           #<class 'int'>
+print(type(age))          #<class 'int'>                                                                  #data type of variables are defined as the data assigned to the variable
+
+age = "2 yeares"                                                                                          #varaibe reassigned
+print(age)                #2 years
+print(type(age))          #<clas 'str'>                                                                   #data type of variables are defined as the data assigned to the variable
+
+greeting = "hello" 
+name = "Protap"
+print(greeting +  name)
+print(greeting + " " + name)                         #hello Protap                                         #adding 2 variables. " " is a way to add space, it's possible when other variables are also string, beacause different data tyoes can't be concatenated.
+print("I'm" + 21 + "years old")                      #TypeError                                            #can only concatenate str (not "int") to str
+
+
+
+
+#Numeric data types
+a = 2
+b = 2.0
+print(type(a))                                      #<class'int'>
+print(type(b))                                      #<class'float'>
+
+a = 12
+b = 3
+print(a + b)                                        #15
+print(a - b)                                        #9
+print(a * b)                                        #36
+print(a / b)                                        #4.0                                        #divivion returns float
+print(a // b)                                       #4                                          #integer division
+print(a % b)                                        #0                                          # % is remainder operator
+print(12 % 5)                                       #2
+
+for i in range (1,4):                               
+    print(i)                                        #Output is 1,2,3 in different lines.        #range must be in int.
+for i in range (a//b):
+    print(i)                                        #Output is 0,1,2,3 in different lines.      #(a//b) is 4 in line 93, so in this example range is (0,4) as starting point is not included in range, Python determines it as 0.
+for i in range (1,a//b):
+    print(i)                                        #Output is 1,2,3 in different lines.        #In this example range is (1,4)
+
+#Order Precedence
+a = 12
+b = 3
+print(a + b /3 - 4 * 12)                           #-35.0
+print((((a + b) / 3) - 4) *12)                     #12.0                                        #PEMDAS = Parentheses, Exponents, Multiplication/Division, Addition/Subtraction
+                                                                                                #BEDMAS = Brackets, Exponents, Division/Multiplication, Addition/Subtraction
+                                                                                                #BODMAS = Brackets, Order, Division/Multiplication, Addition/Subtraction
+                                                                                                #BIDMAS = Brackets, Index, Division/Multiplication, Addition/Subtraction
+
+
+
+
+
+#String Inexing
+parrot = "Norwegian Blue"
+#ndex number starts with 0, so for the string 'Norwegian Blue':                      #letter: N    o   r   w   e   g   i   a   n       B    l   u   e
+                                                                              #Index Number:  0    1   2   3   4   5   6   7   8   9   10   11  12  13
+                                                                     #Negative Index Number:  -14  -13 -12 -11 -10 -9 -8   -7  -6  -5  -4  -3  -2   -1
+print(parrot[3])                                  #w
+print(parrot[-1])                                 #e
+print(parrot[-14])                                #N
 
