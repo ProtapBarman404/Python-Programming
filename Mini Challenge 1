@@ -1,0 +1,22 @@
+#parrot = "Norwegian Blue"
+#Add some characters to the program, so that it prints out 'we win'
+#Each character should appear on a separate line
+#The program should get the characters from the parrot string, using indexing
+#With the text that is already printed, the final output from the program should be:
+        #Norwegian Blue
+        #w
+        #e
+
+        #w
+        #i
+        #n
+
+#Solve:- By using only postive numbers as Indexing number:
+parrot = "Norwegian Blue"
+print(parrot)
+print(parrot[3])
+print(parrot[4])
+print(parrot[9])
+print(parrot[3])
+print(parrot[6])
+print(parrot[8])
